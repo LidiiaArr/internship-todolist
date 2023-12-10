@@ -25,10 +25,8 @@ const Task = (props: Props) => {
         circle = 'tw-w-6 tw-h-6 tw-bg-green-400 tw-rounded-full tw-mx-4';
     }
     function onClickDeleteHandler() {
-        console.log(props.id)
         dispatch(tasksThunks.deleteTask(props.id))
     }
-console.log(circle)
     function onChangeCheckboxHandler() {
         setChecked(!checked)
         dispatch(tasksThunks.changeStatus({id: props.id, status: checked}))
@@ -56,3 +54,4 @@ console.log(circle)
 export default Task;
 //test
 //test2
+//test3

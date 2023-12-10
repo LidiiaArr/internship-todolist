@@ -32,7 +32,6 @@ export const tasksAPI = {
             localStorage.setItem('tasks',  JSON.stringify({0: tasksArray}))
         }
         let promise: Promise<TaskType> = new Promise((resolve, reject)=> {
-            console.log(task)
             resolve(task as TaskType)
         })
         return promise
@@ -47,11 +46,9 @@ export const tasksAPI = {
             const newArray = tasksArray.filter((t:TaskType)=> {
                 return t.id !== id
             })
-            console.log(newArray, "deleteArr")
             localStorage.setItem('tasks',  JSON.stringify({0: newArray}))
         }
         let promise: Promise<string>  = new Promise((resolve, reject)=> {
-            console.log(id)
             resolve(id)
         })
         return promise
@@ -69,7 +66,6 @@ export const tasksAPI = {
             localStorage.setItem('tasks',  JSON.stringify({0: newArray}))
         }
         let promise: Promise<{id:string, status:boolean}> = new Promise((resolve, reject)=> {
-            console.log(id)
             resolve({id,status})
         })
         return promise
