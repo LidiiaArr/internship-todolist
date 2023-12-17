@@ -7,9 +7,8 @@ type Props = {
 }
 const Tasks = (props: Props) => {
     const tasksForRender = props.tasksForRender
-
         return (
-            <div>
+            <>
                 {tasksForRender?.map((task:TaskType)=> {
                         return <Task
                             key={task?.id}
@@ -21,7 +20,7 @@ const Tasks = (props: Props) => {
                         />
                     }
                 )}
-            </div>
+            </>
         );
 };
 

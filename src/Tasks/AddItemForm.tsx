@@ -6,7 +6,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import {TaskPriorityType, tasksThunks, TaskType} from "../app/tasks.reducer";
+import {tasksThunks} from "../app/tasks.reducer";
 import {useAppDispatch} from "../app/store";
 import {filterPriorityType, filterStatusType} from "../app/App";
 

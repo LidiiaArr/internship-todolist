@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {tasksAPI} from "../app/tasks.api";
 import {useAppDispatch} from "../app/store";
 import {tasksThunks} from "../app/tasks.reducer";
 import cx from "classnames";
@@ -37,13 +36,13 @@ const Task = (props: Props) => {
         <div className={cx('tw-flex tw-justify-center tw-mt-6 tw-items-center')}>
             <input type="checkbox"
                    checked={checked}
-                   onChange={()=> onChangeCheckboxHandler()}
+                   onChange={ onChangeCheckboxHandler}
                    className={cx('tw-mx-6')}
             />
             {props.title} {props.date}
             <span className={circle}></span>
             <button
-                onClick={()=>onClickDeleteHandler()}
+                onClick={onClickDeleteHandler}
                     className={cx('tw-bg-gray-400 hover:tw-bg-gray-500 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded')}
             >Delete</button>
         </div>
@@ -52,6 +51,3 @@ const Task = (props: Props) => {
 };
 
 export default Task;
-//test
-//test2
-//test3

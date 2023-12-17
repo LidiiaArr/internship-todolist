@@ -2,7 +2,7 @@ import { AnyAction } from "redux";
 import { ThunkAction } from "redux-thunk";
 import { configureStore } from "@reduxjs/toolkit";
 import {tasksReducer} from "./tasks.reducer";
-import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
+import { useDispatch} from "react-redux";
 
 
 export const store = configureStore({
